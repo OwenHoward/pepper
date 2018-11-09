@@ -1,0 +1,18 @@
+topic: ~cmds()
+language: enu
+
+# Defining extra concepts out of words or group of words
+#concept:(hello) [hello hi hey "good morning" greetings]
+
+# Catching inputs and triggering outputs
+#u:(e:onStart) $onStopped=1
+
+# Replying to speech
+#u:(~hello) ~hello
+
+u:(turn around) I will turn around! $command="turn around"
+u:(move forward) I will move forward! $command="move forward"
+u:(move backwards) I will move backwards! $command="move backwards"
+u:(move left) I will move left! $command="move left"
+u:(move right) I will move right! $command="move right"
+u:(stop) Stopping... $command="stop"
