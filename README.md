@@ -1,2 +1,2 @@
 # pepper
-Pepper repository voor de opleiding EnergieTechnologie
+Pepper repository voor de opleiding EnergieTechnologie. Deze repo wordt beheerd door Nicolas Henrotte. Bij vragen, opmerkingen of suggesties, neem contact op via [nicolas.henrotte@student.odisee.be]
