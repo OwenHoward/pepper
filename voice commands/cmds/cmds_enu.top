@@ -11,8 +11,10 @@ language: enu
 #u:(~hello) ~hello
 
 u:(turn around) I will turn around! $command="turn around"
+u:(turn) I will turn 90 degrees! $command="turn"
 u:(move forward) I will move forward! $command="move forward"
 u:(move backwards) I will move backwards! $command="move backwards"
 u:(move left) I will move left! $command="move left"
 u:(move right) I will move right! $command="move right"
 u:(stop) Stopping... $command="stop"
+u:(age) I will try to guess your age... $command="age"
