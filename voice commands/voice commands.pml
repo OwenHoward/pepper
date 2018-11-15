@@ -7,7 +7,10 @@
     <Dialogs>
         <Dialog name="cmds" src="cmds/cmds.dlg" />
     </Dialogs>
-    <Resources />
+    <Resources>
+        <File name="I See Fire" src="I See Fire.mp3" />
+        <File name="entechjingle" src="entechjingle.mp3" />
+    </Resources>
     <Topics>
         <Topic name="cmds_enu" src="cmds/cmds_enu.top" topicName="cmds" language="en_US" />
     </Topics>
