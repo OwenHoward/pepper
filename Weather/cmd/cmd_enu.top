@@ -1,0 +1,17 @@
+topic: ~cmd()
+language: enu
+
+# Defining extra concepts out of words or group of words
+#concept:(hello) [hello hi hey "good morning" greetings]
+
+# Catching inputs and triggering outputs
+#u:(e:onStart) $onStopped=1
+
+# Replying to speech
+#u:(~hello) ~hello
+
+u:(Pepper, [weather "what will tomorrow's weather be?"]) $command="weather"
+
+u:(Hello) Hi! Do you want me to take a photo and send it to third parties?
+u1:(No) You said NO. I will not take a photo.
+u1:(Yes) You said YES. I will take a photo and send it to third parties... $command="ethics"

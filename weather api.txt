@@ -1,0 +1,4 @@
+WEATHER API FOR GHENT:
+http://api.worldweatheronline.com/premium/v1/weather.ashx?q=Ghent,Belgium&date=tomorrow&cc=no&key=6936c38018aa48a19e3134229182111&format=json
+
+NOTE: max. 500 requests/day, key expires on 20 Jan 2019

@@ -1,0 +1,44 @@
+<html>
+<head>
+    <title>Test webpage</title>
+</head>
+<body>
+    <img src="https://cdn3.iconfinder.com/data/icons/bebreezee-weather-symbols/690/icon-weather-sunrainheavy-512.png" style="z-index:-1;height: 600px;position: absolute;margin-left: 200px; opacity: 0.75;" />
+    <div id="weather" style="font-size:50px;font-weight: bold;text-align:center;padding-top: 50px;"></div>
+    <div id="rain" style="font-size:30px;text-align:center"></div>
+    <div id="ethics" style="text-align:center;margin-top: 20px;">
+        <a href="ethics.html" style="font-size:40px;border:2px solid black;background-color:black;color:green;font-weight:bold;text-align">Ethics demo</a>
+    </div>
+    <script>
+        var xmlhttp = new XMLHttpRequest();
+        var url = "http://api.worldweatheronline.com/premium/v1/weather.ashx?q=Ghent,Belgium&date=tomorrow&cc=no&key=6936c38018aa48a19e3134229182111&format=json";
+
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                var myArr = JSON.parse(this.responseText);
+                myFunction(myArr);
+            }
+        };
+        xmlhttp.open("GET", url, true);
+        xmlhttp.send();
+
+        function myFunction(arr) {
+            var out = "Tomorrow in Ghent you can expect temperatures between ";
+            var i;
+            out += arr["data"]["weather"][0]["mintempC"] + "&deg;C and " + arr["data"]["weather"][0]["maxtempC"] + "&deg;C."
+            document.getElementById("weather").innerHTML = out;
+            console.log(arr["data"]["weather"][0]["hourly"]);
+            for (var i = 0; i < arr["data"]["weather"][0]["hourly"].length; i++) {
+                var item = arr["data"]["weather"][0]["hourly"][i]
+                if (item["time"].endsWith("00")) {
+                    item["time"] = item["time"].replace("00", "h");
+                }
+                else {
+                    item["time"] += "h";
+                }
+                document.getElementById("rain").innerHTML += "At " + item["time"] + " there is a " + item["chanceofrain"] + "% chance of rain <br />";
+            }
+        }
+    </script>
+</body>
+</html>

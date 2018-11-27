@@ -9,7 +9,6 @@
     </Dialogs>
     <Resources>
         <File name="index" src="html/index.html" />
-        <File name="entech" src="html/entech.mp4" />
         <File name="choice_sentences_light" src="behavior_1/Aldebaran/choice_sentences_light.xml" />
     </Resources>
     <Topics>
